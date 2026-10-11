@@ -3,3 +3,7 @@
 RespaldoRestore/*.sql
 Thumbs.db
 desktop.ini
+
+# Datos personales y respaldos (no se publican; quedan en tu disco)
+**/RespaldoRestore/backup/
+*.rar
