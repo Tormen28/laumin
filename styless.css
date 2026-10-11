@@ -1,0 +1,248 @@
+
+body {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0; /* Fondo claro para la página */
+}
+body {
+    background-image: url("inventario/fondo1.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+form {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sutil sombra */
+    padding: 30px;
+    border-radius: 15px; /* Bordes redondeados */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 380px;
+    background: white; /* Fondo blanco para el formulario */
+}
+
+form h2{
+    font-size: 32px;
+    color: #333; /* Color de texto más oscuro */
+    margin: 0 0 10px 0; /* Espaciado inferior */
+}
+
+form p {
+    font-size: 18px;
+    color: #555; /* Color de texto más suave */
+    margin-bottom: 25px;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%; /* El input-wrapper ocupa el 100% del ancho del contenedor */
+    margin-bottom: 20px;
+}
+
+input {
+    color: #333;
+    padding: 15px 15px 15px 50px; /* Ajuste del padding para el icono */
+    width: calc(100% - 50px); /* El ancho del input se ajusta teniendo en cuenta el padding */
+    border-radius: 25px;
+    border: 1px solid #ddd; /* Borde más claro */
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s ease; /* Transición suave para el borde */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+input:focus {
+    border-color: #4CAF50; /* Resalta el borde al enfocar */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3); /* Añade una ligera sombra al enfocar */
+}
+
+
+input::placeholder {
+    font-size: 16px;
+    color: #aaa; /* Color de placeholder más claro */
+}
+
+.input-icon {
+    position: absolute;
+    height: 24px; /* Iconos más pequeños */
+    width: 24px;
+    left: 15px; /* Ajuste de la posición del icono */
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.7; /* Iconos un poco más transparentes */
+}
+
+.btn {
+    padding: 12px 20px;
+    background: linear-gradient(90deg, #80CBC4, #4DB6AC); /* Gradiente más suave: Teal */
+    border: none;
+    border-radius: 25px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+    width: 100%; /* El botón ocupa el 100% del ancho del contenedor */
+    box-sizing: border-box;
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, #4DB6AC, #26A69A); /* Oscurece un poco el gradiente al pasar el mouse */
+}
+
+.btn:active {
+    background: linear-gradient(90deg, #26A69A, #00897B); /* Aún más oscuro al hacer clic */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Reduce la sombra al hacer clic */
+    transform: translateY(1px); /* Pequeño desplazamiento hacia abajo al hacer clic */
+}
+
+.link {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.register-link {
+    color: #00897B; /* Enlace de registro en un tono de verde más oscuro */
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease; /* Transición suave para el color del texto */
+}
+
+.register-link:hover {
+    color: #00563F; /* Oscurece el enlace al pasar el mouse */
+    text-decoration: underline; /* Subraya el enlace al pasar el mouse */
+}
+
+@media (max-width: 768px) {
+    form {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .input-wrapper {
+        width: 100%;
+    }
+
+    input {
+        width: calc(100% - 50px);
+    }
+}
+
+.input-wrapper select {
+    color: #333;
+    padding: 15px 15px 15px 50px;
+    width: calc(100% - 50px);
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+    appearance: none; /* Elimina la flecha por defecto del navegador */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23aaa' d='M2 0L0 2h4z'%3E%3C/path%3E%3C/svg%3E"); /* Flecha SVG personalizada */
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 8px 10px;
+}
+
+.input-wrapper select:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+.input-wrapper select option {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.select-icon {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.7;
+}
+.input-wrapper label {
+    display: block; /* Hace que el label ocupe una línea completa */
+    margin-bottom: 8px; /* Espacio entre el label y el input */
+    color: #555; /* Color de texto más suave */
+    font-size: 16px;
+    font-weight: normal; /* Peso de fuente normal */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-wrapper select {
+    color: #333;
+    padding: 15px 15px 15px 50px;
+    width: calc(100% - 50px);
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23aaa' d='M2 0L0 2h4z'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 8px 10px;
+}
+
+.input-wrapper select:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+.input-wrapper select option {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.select-icon {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.7;
+}
+
+.input-wrapper button[type="submit"] {
+    padding: 12px 20px;
+    background: linear-gradient(90deg, #80CBC4, #4DB6AC);
+    border: none;
+    border-radius: 25px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input-wrapper button[type="submit"]:hover {
+    background: linear-gradient(90deg, #4DB6AC, #26A69A);
+}
+
+.input-wrapper button[type="submit"]:active {
+    background: linear-gradient(90deg, #26A69A, #00897B);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    transform: translateY(1px);
+}

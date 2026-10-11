@@ -1,0 +1,593 @@
+ /* Estilos generales - Tema amigable */
+ body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: #f0f7ff;
+    color: #2d4059;
+    line-height: 1.6;
+  }
+  
+  /* Navegación superior - Estilo juguetón */
+  .logo-nav {
+    background: #ffffff;
+    padding: 15px 30px;
+    box-shadow: 0 4px 15px rgba(50, 130, 250, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espacio entre logo y placeholder */
+  }
+  
+  .logo-link {
+    font-size: 2.2rem;
+    color: #3282fa;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo-link:hover {
+    transform: scale(1.05);
+    color: #2356a8;
+  }
+  
+  .logo-placeholder {
+    /* Este div mantiene el espacio para alinear el logo a la izquierda
+       Si no necesitas nada a la derecha, puedes eliminarlo */
+    width: 200px; /* Ajusta según el ancho del menú si es necesario */
+  }
+  
+  
+  .menu {
+    background-color: #3282fa;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 20px auto;
+    width: 90%;
+    box-shadow: 0 4px 20px rgba(50, 130, 250, 0.2);
+    position: relative;
+  }
+  
+  .menu-list {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .menu-item {
+    position: relative;
+  }
+  
+  .menu-link {
+    color: #3282fa;
+    padding: 12px 20px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    display: block;
+  }
+  
+  .menu-link:hover,
+  .menu-item.active > .menu-link {
+    background-color: white;
+    color: #3282fa;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .menu-item > .menu-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .menu-item > .menu-link .submenu-icon {
+    margin-left: 10px;
+    font-size: 0.8em;
+  }
+  
+  .submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(50, 130, 250, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 10;
+    min-width: 200px;
+  }
+  
+  .menu-item:hover > .submenu,
+  .menu-item.active > .submenu {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .submenu-item {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .submenu-link {
+    color: #2d4059;
+    padding: 12px 20px;
+    display: block;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+    border-radius: 10px;
+    white-space: nowrap;
+  }
+  
+  .submenu-link:hover,
+  .submenu-link.active {
+    background-color: #3282fa;
+    color: white;
+  }
+  
+  
+  
+  /* Formulario - Estilo tarjeta suave */
+  form {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(50, 130, 250, 0.1);
+    margin: 30px auto;
+    width: 85%;
+    max-width: 1000px;
+  }
+  
+  h2 {
+    color: #3282fa;
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  
+  h2:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #ffd700;
+    margin: 10px auto;
+    border-radius: 2px;
+  }
+  
+  /* Campos de entrada - Estilo moderno */
+  .input-group {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2d4059;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  
+  
+  input,
+  select {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #e0e7ff;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #f8fbff;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+  }
+  
+  input:focus,
+  select:focus {
+    border-color: #3282fa;
+    background: white;
+    box-shadow: 0 4px 15px rgba(50, 130, 250, 0.1);
+    outline: none; /* Quita el outline por defecto en algunos navegadores */
+  }
+  
+  /* Botones - Estilo flotante */
+  .buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  
+  button {
+    padding: 14px 35px;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  button[type="submit"] {
+    background: #3282fa;
+    color: white;
+    box-shadow: 0 5px 15px rgba(50, 130, 250, 0.3);
+  }
+  
+  button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(50, 130, 250, 0.4);
+  }
+  
+  button[type="reset"] {
+    background: #ff6b6b;
+    color: white;
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.2);
+  }
+  
+  button[type="reset"]:hover {
+    background: #ff4757;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(255, 107, 107, 0.4);
+  }
+  
+  
+  /* Sección estudiantes - Estilo acordeón */
+  .student-section {
+    background: #f8fbff;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 2px solid #e0e7ff;
+    transition: transform 0.3s ease;
+  }
+  
+  .student-section:hover {
+    transform: translateY(-3px);
+  }
+  
+  .student-section h3 {
+    color: #2d4059;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .student-section h3:before {
+    content: '🎒';
+    font-size: 1.2em;
+  }
+  
+  /* Diseño responsivo */
+  @media (max-width: 768px) {
+    form {
+      width: 95%;
+      padding: 20px;
+    }
+    
+    .menu-list {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .menu-link {
+      padding: 10px 15px;
+      font-size: 0.9rem;
+    }
+    
+    button {
+      padding: 12px 25px;
+      font-size: 0.9rem;
+    }
+    
+      .logo-nav {
+          flex-direction: column;
+          text-align: center;
+      }
+      
+      .logo-placeholder {
+          width: 100%;
+          text-align: center;
+          margin-top: 10px;
+      }
+  }
+  
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 1.8rem;
+    }
+    
+    .student-section {
+      padding: 15px;
+    }
+    
+    input,
+    select {
+      padding: 12px;
+    }
+    
+      .menu-list {
+          flex-direction: column;
+      }
+      
+      .menu-item {
+          text-align: center;
+      }
+      
+      .submenu {
+         left: 50%;
+         transform: translateX(-50%);
+      }
+  }
+  
+  /* Efectos especiales */
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  .logo-placeholder {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  /* Iconos decorativos */
+  .input-group label:after {
+    content: '✦';
+    margin-left: 5px;
+    color: #3282fa;
+    font-size: 0.8em;
+  }
+  
+  /* Estilos para tablas - Tema Coherente */
+  table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 25px 0;
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(50, 130, 250, 0.1);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    table:hover {
+      transform: translateY(-3px);
+    }
+    
+    th {
+      background: #3282fa;
+      color: white;
+      padding: 18px;
+      font-weight: 600;
+      text-align: left;
+      position: relative;
+    }
+    
+    th:not(:last-child):after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 60%;
+      width: 2px;
+      background: rgba(255, 255, 255, 0.2);
+    }
+    
+    td {
+      padding: 15px;
+      border-bottom: 2px solid #f0f7ff;
+      color: #2d4059;
+      position: relative;
+    }
+    
+    tr:last-child td {
+      border-bottom: none;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #f8fbff;
+    }
+    
+    /* Botones de Acción */
+    .action-buttons {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    
+    .action-buttons a {
+      padding: 8px 15px;
+      border-radius: 25px;
+      font-size: 0.9em;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    
+    .editar {
+      background: #4CAF50;
+      color: white !important;
+      box-shadow: 0 3px 10px rgba(76, 175, 80, 0.2);
+    }
+    
+    .eliminar {
+      background: #ff6b6b;
+      color: white !important;
+      box-shadow: 0 3px 10px rgba(255, 107, 107, 0.2);
+    }
+    
+    .asistencia {
+      background: #2196F3;
+      color: white !important;
+      box-shadow: 0 3px 10px rgba(33, 150, 243, 0.2);
+    }
+    
+    .action-buttons a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Efecto hover para filas */
+    tr {
+      transition: background 0.3s ease;
+    }
+    
+    tr:hover {
+      background: #e3f2fd !important;
+    }
+    
+    /* Iconos decorativos */
+    .action-buttons a:before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      font-size: 0.9em;
+    }
+    
+    .editar:before { content: "\f304"; } /* Icono lápiz */
+    .eliminar:before { content: "\f2ed"; } /* Icono basura */
+    .asistencia:before { content: "\f274"; } /* Icono checklist */
+    
+    /* Diseño responsivo para tablas */
+    @media (max-width: 768px) {
+      table {
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(50, 130, 250, 0.1);
+      }
+      
+      th, td {
+        padding: 12px;
+      }
+      
+      .action-buttons {
+        flex-direction: column;
+        gap: 5px;
+      }
+      
+      .action-buttons a {
+        padding: 6px 12px;
+        justify-content: center;
+      }
+    }
+    
+    /* Animación de entrada */
+    @keyframes tableEntry {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    table {
+      animation: tableEntry 0.6s ease-out forwards;
+    }
+    .btn-completa {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #28a745;
+      color: white;
+      margin-bottom: 20px;
+      text-decoration: none;
+      border-radius: 5px;
+  }
+  mensaje-flotante {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    background: #28a745;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    z-index: 9999;
+    animation: slideIn 0.5s ease-out;
+  }
+  
+  @keyframes slideIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+  }
+  
+  /* Para navegadores antiguos */
+  .mensaje-flotante.error { background: #dc3545; }
+  .mensaje-flotante.advertencia { background: #ffc107; color: #000; }
+  /* Estilo base del botón */
+  .btn-completa {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 25px;
+    background: #2196F3;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin: 15px 0;
+    box-shadow: 0 2px 5px rgba(33, 150, 243, 0.3);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* Efecto hover */
+  .btn-completa:hover {
+    background: #1976D2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(33, 150, 243, 0.3);
+  }
+  
+  /* Efecto al hacer clic */
+  .btn-completa:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(33, 150, 243, 0.3);
+  }
+  
+  /* Icono de Font Awesome */
+  .btn-completa i {
+    margin-right: 10px;
+    font-size: 18px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Animación del icono al pasar el mouse */
+  .btn-completa:hover i {
+    transform: scale(1.1);
+  }
+  
+  /* Versión para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .btn-completa {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .btn-completa i {
+        font-size: 16px;
+    }
+  }
